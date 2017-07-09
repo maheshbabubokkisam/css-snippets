@@ -1,0 +1,34 @@
+table { 
+  margin: auto;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 300px; 
+
+  display: block;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: pink;
+  width: 100px;
+  padding: 3px;
+}
+
+td {
+  background-color: lightgrey;
+  width: 100px;
+  padding: 3px;
+}
+
+thead {
+  display: block;
+  position: sticky;
+  top: 0;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+thead tr {
+  display: table;
+}
