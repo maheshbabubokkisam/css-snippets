@@ -1,76 +1,76 @@
 /* Looks */
 .container {
-    background-color: pink;
-    width: 500px;
-    height: 500px;
-    margin: auto;
+  background-color: pink;
+  width: 500px;
+  height: 500px;
+  margin: auto;
 }
 
 .box {
-    background-color: lightgreen;
-    height: 200px;
-    width: 200px;
+  background-color: lightgreen;
+  height: 200px;
+  width: 200px;
 }
 
 .divider {
-    height: 50px;
-    width: 50px;
-    background-color: white;
+  height: 50px;
+  width: 50px;
+  background-color: white;
 }
 
 /* Centering */
 
 /* Method 1: text-align and inline-block */
 .text-align .container {
-    text-align: center;
+  text-align: center;
 }
 
 .text-align .box {
-    display: inline-block;
+  display: inline-block;
 }
 
 /* Method 2: margin auto */
 .margin .box {
-    margin: auto; /* also using i.e. px values moves respectively */
+  margin: auto; /* also using i.e. px values moves respectively */
 }
 
 /* Method 3: absolute position and negative margin */
 .absolute .container {
-    position: relative; /* required when centering vertically */
+  position: relative; /* required when centering vertically */
 }
 
 .absolute .box {
-    position: absolute;
+  position: absolute;
 
-    left: 50%;
-    margin-left: -100px;
+  left: 50%;
+  margin-left: -100px;
 
-    top: 50%;
-    margin-top: -100px;
+  top: 50%;
+  margin-top: -100px;
 
-    /* this method requires pulling element with half of the width/height, which is pain */
+  /* this method requires pulling element with half of the width/height, which is pain */
 }
 
 /* Method 4: absolute positioning and transform */
 .transform .container {
-    position: relative; /* required when centering vertically */
+  position: relative; /* required when centering vertically */
 }
 
 .transform .box {
-    position: absolute;
-    
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* here goes the magic */
+  position: absolute;
 
-    /* this method works great with any sizes, even dynamic ones */
-    width: 230px;
-    height: 180px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* here goes the magic */
+
+  /* this method works great with any sizes, even dynamic ones */
+  width: 230px;
+  height: 180px;
 }
 
 /* Method 5: flexbox, go to method I think */
 .flex .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
