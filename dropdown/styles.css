@@ -1,0 +1,42 @@
+/* Simple menu */
+nav {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 35%;
+}
+
+.item {
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.item:hover {
+  background-color: lightgrey;
+  cursor: pointer;
+}
+
+.sub-menu {
+  opacity: 0;
+  z-index: -1;
+
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  transition: opacity 500ms ease-in-out;
+}
+
+.sub-item {
+  padding: 0.5rem 1rem;
+  background-color: lightgrey;
+}
+
+.sub-item:hover {
+  background-color: grey;
+}
+
+/* Sub menu trigger */
+nav .item:hover .sub-menu {
+  opacity: 1;
+  z-index: 1;
+}
