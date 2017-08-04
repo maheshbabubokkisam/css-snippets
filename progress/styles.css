@@ -1,0 +1,26 @@
+progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 5px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background-color: transparent;
+  border: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: transparent;
+}
+
+.content {
+  margin: 3% 20%;
+  width: 60%;
+  height: 5000px;
+  background-color: pink;
+}

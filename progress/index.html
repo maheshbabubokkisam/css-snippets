@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Progress</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script>
+      // set max on document ready
+      $(document).ready(function() {
+        var winHeight = $(window).height();
+        var docHeight = $(document).height();
+        var max = docHeight - winHeight;
+        $('progress').attr('max', max);
+      });
+
+      // handle user resize window, hence new max
+      $(window).on('resize', function() {
+        var winHeight = $(window).height();
+        var docHeight = $(document).height();
+
+        var max = docHeight - winHeight;
+        $('progress').attr('max', max);
+
+        var value =  $(window).scrollTop();
+        $('progress').attr('value', value);
+
+      });
+
+      // scroll should change progress
+      $(document).on('scroll', function() {
+        var value = $(window).scrollTop();
+        $('progress').attr('value', value);
+      });
+    </script>
+  </head>
+
+  <body>
+    <progress value="0"></progress>
+    <div class="content"></div>
+  </body>
+</html>
