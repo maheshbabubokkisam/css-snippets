@@ -1,0 +1,21 @@
+/* monospace font is required */
+body {
+  font-family: Ubuntu Mono;
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
+
+@keyframes caret {
+  50% { border-color: transparent; }
+}
+
+h1 {
+  width: 16ch; /* width equal to characters amount */
+  overflow: hidden; /* makes not animated text hidden */
+  white-space: nowrap; /* text holdes in one line */
+  border-right: .05em solid; /* caret */
+  animation: typing 6s steps(16),
+             caret 1s steps(1) infinite;
+}
