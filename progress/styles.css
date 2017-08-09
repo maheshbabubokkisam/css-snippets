@@ -6,6 +6,8 @@ progress {
   width: 100%;
   height: 5px;
 
+  /* not sure about browser specific prefixes,
+   * tested only in chrome */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -14,10 +16,13 @@ progress {
   border: none;
 }
 
+/* not sure why this is required, 
+ * maybe optional in newer chrome */
 progress::-webkit-progress-bar {
   background-color: transparent;
 }
 
+/* required to make page scrollable */
 .content {
   margin: 3% 20%;
   width: 60%;
