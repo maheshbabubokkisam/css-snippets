@@ -7,3 +7,4 @@ Contains
 * dropdown - pure css dropdown menu
 * animations - various animation snippets 
   * typewriter_text - animation of text typing using typewriter
+  * popup - popup animation on focus
