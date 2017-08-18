@@ -1,0 +1,45 @@
+header, nav, aside, main, footer {
+  color: white;
+  background-color: orange;
+  font-size: 24px;
+  padding: 1rem;
+}
+
+body {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 
+    "header header nav nav    nav    nav    nav"
+    "aside  aside  .   main   main   main   main"
+    "aside  aside  .   footer footer footer footer";
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    grid-template-areas: 
+      "header nav    nav "
+      "main   main   main"
+      "aside  aside  aside"
+      "footer footer footer";
+    }
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}

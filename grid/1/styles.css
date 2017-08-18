@@ -1,0 +1,38 @@
+header, nav, aside, main, footer {
+  color: white;
+  background-color: orange;
+  font-size: 24px;
+  padding: 2rem;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 10fr;
+  grid-template-rows: 150px 100px 500px auto 200px;
+  grid-gap: 10px;
+}
+
+header {
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+
+nav {
+  grid-column: 4 / 5;
+  grid-row: 1;
+}
+
+main {
+  grid-column: 4 / 5;
+  grid-row: 2 / 5;
+}
+
+aside {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+footer {
+  grid-column: 4 / 5;
+  grid-row 5;
+}
