@@ -1,0 +1,39 @@
+body {
+  background: url('http://lorempixel.com/1400/800/');
+  background-size: cover;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Transparent frame can be achived by changing background-clip to padding only */
+div {
+  border: 20px solid hsla(0, 0%, 100%, .5);
+  background: white;
+  background-clip: padding-box;
+
+  padding: 2em;
+  margin: 50px auto;
+  max-width: 20em;
+}
+
+/* Second frame can be achived using box-shadow */
+.double-transparent-frame {
+  box-shadow: 0 0 0 20px rgba(50, 50, 50, .5);
+}
+
+.transparent-frame-with-shadow {
+  box-shadow: 0 0 20px deeppink;
+}
+
+/* Second border can also added using element outline,
+ * outline can be moved away from element with outline-offset property,
+ * but it is not affected by border radius */
+.outline {
+  outline: 20px solid rgba(50, 50, 50, .7);
+  outline-offset: 20px;
+}
+
+.radius {
+  border-radius: 25px;
+}
