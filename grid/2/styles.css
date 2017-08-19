@@ -1,3 +1,4 @@
+/* Looks */
 header, nav, aside, main, footer {
   color: white;
   background-color: orange;
@@ -5,6 +6,8 @@ header, nav, aside, main, footer {
   padding: 1rem;
 }
 
+/* This is different way of grid usage,
+ * grid areas are placed on grid in ASCII art manner */
 body {
   display: grid;
   grid-gap: 10px;
@@ -14,6 +17,7 @@ body {
     "aside  aside  .   footer footer footer footer";
 }
 
+/* Grid areas placement can change on different screen sizes */
 @media screen and (max-width: 800px) {
   body {
     grid-template-areas: 
@@ -24,6 +28,7 @@ body {
     }
 }
 
+/* Elements are assigned to areas */
 header {
   grid-area: header;
 }

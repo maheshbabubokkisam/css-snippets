@@ -1,3 +1,4 @@
+/* Looks */
 header, nav, aside, main, footer {
   color: white;
   background-color: orange;
@@ -5,6 +6,10 @@ header, nav, aside, main, footer {
   padding: 2rem;
 }
 
+/* Grid definition 
+ * columns are defined using fraction unit,
+ * rows height are set in pixelsi,
+ * grid-gap defines gutter */
 body {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 10fr;
@@ -12,6 +17,8 @@ body {
   grid-gap: 10px;
 }
 
+/* Each element is set between grid lines,
+ * which are numbered from 1 */
 header {
   grid-column: 1 / 4;
   grid-row: 1;
