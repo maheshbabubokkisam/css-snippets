@@ -9,4 +9,5 @@ Contains
 * fixed_table_header - postioning table header in fixed position in relation to table content/page
 * grid - css grid examples
 * scalable_buttons - buttons written using rems/ems
+* selectors - selectors testing
 * transparent_image_frame - elements with different types of frames

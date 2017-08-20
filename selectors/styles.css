@@ -1,0 +1,109 @@
+/* CSS Selectors recap, comment all then uncomment one by one to see what is happening */
+
+/* Targets all elements */
+* {
+  margin: 0 20px;
+}
+
+/* Targets all anchor elements */
+a {
+  text-transform: uppercase;
+}
+
+/* Targets ALL elements with content class */
+.content {
+  background-color: lightblue;
+}
+
+/* Target ALL elements with both classes (.content AND .second), overwrites previous rule because of selector strength */
+.content.second {
+  background-color: darkcyan;
+}
+
+/* Applied rule to both strong AND a */
+strong, a {
+  background-color: orange;
+}
+
+/* Targets element with title id */
+#title {
+  background-color: darkorchid;
+}
+
+/* Targets ALL a elements in li elements */
+li a {
+  color: blue;
+  background-color: red;
+}
+
+/* Targets ALL  a elements in li li elements, it's important that this not apply 'li a' */
+li li a {
+  color: purple;
+  background-color: aquamarine;
+}
+
+/* Targets DIRECT DESCENDANT ONLY, so only outer ul element */
+.container > ul {
+  border: 3px solid orange;
+}
+
+/* Targets FIRST p element AFTER element with .container class */
+.container + p {
+  color: white;
+}
+
+/* Targets ALL p elements AFTER element with .containser class */
+.container ~ p {
+  text-transform: uppercase;
+}
+
+/* Pseudo selectors */ 
+
+/* Select only on hover */
+p:hover {
+ background-color: black;
+ color: white;
+}
+
+/* Next rules show how to make element visible using only CSS selectors */
+.square {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  background-color: cyan;
+  display: none;
+}
+
+/* When hovers on p element */ 
+p:hover + .square {
+  display: block;
+}
+
+/* Pseudo classes can be combined, last-of-type takes last element */
+p:hover:last-of-type {
+  background-color: green;
+  color: white;
+}
+
+/* first-child is opposite of last-of-type */ 
+li:hover:first-child {
+  background-color: pink;
+  color: grey;
+}
+
+/* nth-child accepts odd/even number or some math */ 
+li:nth-child(even) {
+  text-transform: capitalize;
+}
+
+li:nth-child(odd) {
+  text-transform: uppercase;
+}
+
+li:hover:nth-child(2) {
+
+}
+
+li:hover:nth-child(2n + 1) {
+  background-color: burlywood;
+}
