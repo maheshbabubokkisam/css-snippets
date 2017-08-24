@@ -1,7 +1,7 @@
 Contains
 
 * animations - various animation snippets 
-  * bouncing_ball - diffrent cubic-bezier functions
+  * bouncing_ball - diffrent cubic-bezier functions on bouncing ball
   * popup - popup animation on input focus
   * typewriter_text - animation of text typing using typewriter
 * basic_html5 - basic html5 template, with styles file included

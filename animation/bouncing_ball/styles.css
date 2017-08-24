@@ -1,3 +1,4 @@
+/* Looks */
 body {
   background: linear-gradient(skyblue, white 450px, yellowgreen 0);
   height: 100vh;
@@ -13,8 +14,10 @@ body {
   border-radius: 50%;
   background: red radial-gradient(at 30% 30%, #fdd, red);
 }
-
-@keyframes bounce1 {
+/* Animations */
+/* This is simpler version using predefined timing functions in CSS
+ * and cubic-bezier (inverted ease) */
+@keyframes simple {
   60%, 80%, to {
     transform: translatey(400px);
     animation-timing-function: ease;
@@ -29,9 +32,11 @@ body {
   }
 }
 
-@keyframes bounce2 {
+/* This version uses animate.css library cubic-bezier values */
+@keyframes advanced {
   60%, 80%, to {
     transform: translatey(400px);
+    animation-timing-function: cubic-bezier(.215, .61, .355, .1);
   }
 
   70% { 
@@ -43,10 +48,30 @@ body {
   }
 }
 
-.first {
-  animation: bounce1 2s cubic-bezier(.1, .25, 1, .25) forwards;
+/* As above, just inverted for comparison reasons */
+@keyframes inverted {
+  60%, 80%, to {
+    transform: translatey(400px);
+    animation-timing-function: cubic-bezier(.755, .05, .855, .06);
+  }
+
+  70% { 
+    transform: translatey(300px);
+  }
+
+  90% { 
+    transform: translatey(360px); 
+  }
 }
 
-.second {
-  animation: bounce2 2s cubic-bezier(.1, .25, 1, .25) forwards;
+.simple {
+  animation: simple 2s cubic-bezier(.1, .25, 1, .25) forwards;
+}
+
+.advanced {
+  animation: advanced 2s cubic-bezier(.755, .05, .855, .06) forwards;
+}
+
+.inverted {
+  animation: inverted 2s cubic-bezier(.215, .61, .355, .1) forwards;
 }
