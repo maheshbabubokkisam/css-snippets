@@ -11,4 +11,5 @@ Contains
 * grid - css grid examples
 * scalable_buttons - buttons written using rems/ems
 * selectors - selectors testing
+* text wrap - multiline text wrap with ...
 * transparent_image_frame - elements with different types of frames

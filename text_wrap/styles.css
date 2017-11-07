@@ -1,0 +1,28 @@
+.text {
+  background-color: lightblue;
+  max-width: 1200px;
+
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2em;
+  max-height: 3.6em;
+  text-align: justify;
+  padding-right: 1rem;
+}
+
+.text:before {
+  content: '...';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.text:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 1em;
+  height: 1em;
+  margin-top: 0.2em;
+  background-color: lightblue;
+}
