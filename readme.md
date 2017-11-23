@@ -8,7 +8,9 @@ Contains
 * centering - horizontal/vertical elements centering in container
 * dropdown - pure css dropdown menu
 * fixed_table_header - postioning table header in fixed position in relation to table content/page
-* grid - css grid examples
+* grid - grid examples
+  * css_grid - css grid
+  * float_based - using float left
 * scalable_buttons - buttons written using rems/ems
 * selectors - selectors testing
 * text wrap - multiline text wrap with ...

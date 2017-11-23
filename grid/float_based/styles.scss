@@ -1,0 +1,50 @@
+$row-width: 114rem;
+$row-gutter: 6rem;
+$column-gutter: 4rem;
+
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.row {
+  background-color: lightgrey; 
+  font-size: 2.4rem;
+  max-width: $row-width;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: $row-gutter;
+  }
+
+  [class^="col-"] { // neat trick to target all col-xx classes
+    background-color: orange; 
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $column-gutter;
+    }
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - (3 * #{$column-gutter}))/4); // native CSS calc allows using different unit types
+  }
+
+  .col-2-of-4 {
+    width: calc((100% - #{$column-gutter}) / 2); // #{} variable interpolation is required when using in calc 
+  }
+
+  .col-3-of-4 {
+    width: calc(3 * ((100% - 3 * #{$column-gutter}) / 4) + 2 * #{$column-gutter});
+  }
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
