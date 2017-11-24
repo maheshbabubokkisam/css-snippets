@@ -1,0 +1,15 @@
+h1 {
+  font-size: 72px;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  display: inline-block;
+  color: transparent;
+}
+
+.gradient {
+  background-image: linear-gradient(to right, #f03434, #f1a9a0);
+}
+
+.image {
+  background-image: url('http://lorempixel.com/800/600');
+}
