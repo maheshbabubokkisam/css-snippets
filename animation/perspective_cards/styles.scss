@@ -1,0 +1,37 @@
+.card {
+  perspective: 1500px; // This gives perspective look
+  position: relative; 
+  height: 500px; // Card height must be set manually to equal side height
+
+  .side {
+    height: 500px; // Must be equal as card height
+    width: 400px; 
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 24px;
+    backface-visibility: hidden; 
+    transition: all .7s ease;
+  }
+
+  .front {
+    background-color: red;
+  }
+
+  // Here goes rotation,
+  // scale neglects mirror effect
+  .back{
+    background-color: lime;
+    transform: rotateY(180deg) scale(-1, 1); 
+  }
+
+  &:hover .front {
+    transform: rotateY(180deg); 
+  }
+
+  &:hover .back {
+    transform: rotateY(0deg) scale(-1, 1); 
+  }
+}
